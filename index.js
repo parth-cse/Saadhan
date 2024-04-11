@@ -47,7 +47,7 @@ app.get("/write", (req, res) => {
 
 const storage = multer.diskStorage({
     destination : function(req, file, cb){
-        return cb(null, `${__dirname}/public/img`)
+        return cb(null, `./public/img`)
     }, filename : function(req, file, cb){
         name = `${Date.now()}-${file.originalname}`;
         return cb(null, name);
