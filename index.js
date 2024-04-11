@@ -13,7 +13,7 @@ const port =  3000;
 const write = []
 
 app.use(morgan("tiny"));
-app.use(express.static("public")) 
+app.use(express.static(__dirname+"/public")) 
 app.use('/uploads', express.static('uploads'));
 app.use(bodyParse.urlencoded({ extended: true }));
 
