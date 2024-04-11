@@ -18,7 +18,7 @@ app.use('/uploads', express.static('uploads'));
 app.use(bodyParse.urlencoded({ extended: true }));
 
 app.set('view engine', 'ejs');
-
+app.set('view', __dirname+"/views")
 app.get("/", (req, res) => {
     const data = {
         title: "Home | Saadhan",
