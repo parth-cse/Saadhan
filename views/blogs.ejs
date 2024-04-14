@@ -8,6 +8,10 @@
             <h1><%= blogs[i].title %></h1>
             <p class="author"><%= blogs[i].author %></p>
             <p><%= blogs[i].content %></p>
+            <form action="/options" method="post">
+                <input type="button" value="delete" name="option">
+                <input type="button" value="update" name="option">
+            </form>
         </div>
         <% } }else{ %>
             <div>
