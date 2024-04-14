@@ -1,0 +1,60 @@
+<%- include("partials/header.ejs") %>
+
+<section id="landing">
+    <h2>Trending on Saadhan</h2>
+    <div class="trending">
+        <%  if(blog.length != 0){ for(let i=0; i< blog.length; i++){ %>
+        <div>
+            <div class="text">
+                <h3><%= blog[i].title %></h3>
+                <p><%= blog[i].content %></p>
+            </div>
+            <div class="img">
+                <img src="/img/<%= blog[i].img %>" alt="Image">
+                <a href="/blogS">Continue Reading...</a>
+            </div>
+        </div>
+        <% }} else{ %>
+            
+            <div>
+                <div class="text">
+                    <h3>No blog posts yet! Check back later.</h3>
+                </div>
+                
+            </div>
+
+            <% } %><!--
+        <div>
+            <div class="text">
+                <h3>Artificial Intelligence: a Global Threat</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quisquam inventore ex corporis odit, nam voluptate cumque rem atque laud antium illum! Explicabo ipsum non optio!</p>
+            </div>
+            <div class="img">
+                <img src="#" alt="Image">
+                <a href="/blogS">Continue Reading...</a>
+            </div>
+        </div>
+        <div>
+            <div class="text">
+                <h3>Artificial Intelligence: a Global Threat</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quisquam inventore ex corporis odit, nam voluptate cumque rem atque laudantium illum! Explicabo ipsum non optio!</p>
+            </div>
+            <div class="img">
+                <img src="#" alt="Image">
+                <a href="/blogS">Continue Reading...</a>
+            </div>
+        </div>
+        <div>
+            <div class="text">
+                <h3>Artificial Intelligence: a Global Threat</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quisquam inventore ex corporis odit, nam voluptate cumque rem atque laudantium illum! Explicabo ipsum non optio!</p>
+            </div>
+            <div class="img">
+                <img src="#" alt="Image">
+                <a href="/blogS">Continue Reading...</a>
+            </div>
+        </div>-->
+    </div>
+</section>
+    
+<%- include("partials/footer.ejs") %>

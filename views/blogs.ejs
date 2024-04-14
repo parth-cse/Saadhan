@@ -1,0 +1,20 @@
+<%- include("partials/header.ejs") %>
+
+<section id="blogs">
+    <div class="container">
+        <%if(blogs.length != 0){ for(let i = 0; i<blogs.length; i++){ %>
+        <div>
+            <img src="/img/<%= blogs[i].img %>" alt="Image">
+            <h1><%= blogs[i].title %></h1>
+            <p class="author"><%= blogs[i].author %></p>
+            <p><%= blogs[i].content %></p>
+        </div>
+        <% } }else{ %>
+            <div>
+                <h1>No blog posts yet! Check back later.</h1>
+            </div>
+        <% } %>
+    </div>
+</section>
+
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,16 @@
+<%- include("partials/header.ejs") %>
+
+<section id="form">
+    <h2>Create a Post</h2>
+    <div class="container">
+        <form action="/submit" method="post" enctype="multipart/form-data">
+            <div id="img" ><input type="file" name="img" accept="image/png, image/jpg, image/jpeg" required></div>
+            <div id="int"><input type="text" name="title" id="input-title" placeholder="Blog Title" required></div>
+            <div><input type="text" name="author" id="author" placeholder="Author Name" required></div>
+            <div><textarea name="content" id="content" placeholder="Blog's Body" required></textarea></div>
+            <button type="submit">Post it...</button>
+        </form>        
+    </div>
+</section>
+
+<%- include("partials/footer.ejs") %>
